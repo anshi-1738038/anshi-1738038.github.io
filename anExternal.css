@@ -1,1 +1,88 @@
+html,
+body {
+  height: 100%;
+  margin: 0
+}
 
+body {
+	font-family: 'Lucida Grande', 'Helvetica Neue', sans-serif;
+	font-size: 13px;
+}
+
+div .button {
+	min-width: 300px;
+	position: relative;
+	height: 50px;
+	width: 60vh;
+	float: right;
+
+	background-color: #D14836;
+	background-image: -webkit-linear-gradient(top,#dd4b39,#d14836);
+	background-image: -moz-linear-gradient(top,#dd4b39,#d14836);
+	background-image: -ms-linear-gradient(top,#dd4b39,#d14836);
+	background-image: -o-linear-gradient(top,#dd4b39,#d14836);
+	background-image: linear-gradient(top,#dd4b39,#d14836);
+
+	border: 1px solid transparent;
+	color: white;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 0px 0px 0px 15px;
+	
+	cursor: default;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0 8px;
+
+    line-height: 50px;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: #C53727;
+	background-image: -webkit-linear-gradient(top,#dd4b39,#c53727);
+	background-image: -moz-linear-gradient(top,#dd4b39,#c53727);
+	background-image: -ms-linear-gradient(top,#dd4b39,#c53727);
+	background-image: -o-linear-gradient(top,#dd4b39,#c53727);
+	background-image: linear-gradient(top,#dd4b39,#c53727);	
+}
+
+.button:active {
+	-webkit-box-shadow: inset 0px 1px 2px rgba(0,0,0,.3);
+	-moz-box-shadow: inset 0px 1px 2px rgba(0,0,0,.3);
+	box-shadow: inset 0px 1px 2px rgba(0,0,0,.3);
+}
+
+.ray {
+	position: fixed;
+	visibility: hidden;
+	top: 0px;
+	width: 100%;
+    -webkit-animation:spin 40s linear infinite;
+    -moz-animation:spin 40s linear infinite;
+    animation:spin 40s linear infinite;
+}
+
+.gaben {
+	position: absolute;
+	opacity: 0;
+	left: 50%;
+	width: 30%;
+	height: 100%;
+	top: -100%;
+	margin-left: -15%;
+    -webkit-animation:moveout 10s linear forwards;
+    -moz-animation:moveout 10s linear forwards;
+    animation:moveout 10s linear forwards;
+}
+
+
+@-moz-keyframes moveoute { 100% { -moz-transform: translateY(100%); } }
+@-webkit-keyframes moveout { 100% { -webkit-transform: translateY(100%); } }
+@keyframes moveout { 100% { -webkit-transform: translateY(100%); transform:translateY(100%); } }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
